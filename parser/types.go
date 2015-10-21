@@ -57,7 +57,7 @@ type Service struct {
 }
 
 type Thrift struct {
-	Includes   map[string]string // name -> unique identifier (absolute path generally)
+	Includes   map[string]string `json:"-"`// name -> unique identifier (absolute path generally)
 	Typedefs   map[string]*Type
 	Namespaces map[string]string
 	Constants  map[string]*Constant
